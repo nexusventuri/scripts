@@ -1,0 +1,8 @@
+#!/bin/bash
+
+rvm use ruby-1.9.3@scripts --create
+bundle install
+if [ $? != 0 ]; then
+  gem install bundler
+  bundle install
+fi
